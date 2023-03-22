@@ -1,0 +1,32 @@
+
+.modal-body {
+    background-image: linear-gradient(to top left, #f2bd57, #f4d69e);
+    padding: 5px 25px;
+}
+
+.modal-body i {
+    padding: 10px 12px;
+    background-color: rgb(228, 228, 228);
+    border-radius: 5px;
+    border: 1px solid rgb(214, 214, 214);
+}
+
+.modal-body input, select {
+    border: 1px solid rgb(214, 214, 214);
+    outline: none;
+}
+
+.modal-body select {
+    border-radius: 5px;
+    color: rgb(122, 118, 118);
+    padding: 6px 12px;
+}
+
+.modal-body .form-group {
+    margin-top: 25px;
+}
+
+.form-container {
+    border-radius: 5px;
+    border: 1px solid rgb(214, 214, 214);
+}
