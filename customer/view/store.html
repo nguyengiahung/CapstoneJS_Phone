@@ -17,73 +17,393 @@
     <!-- Boostrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
+    <!-- Slick Library -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+    <!-- File css -->
+    <link rel="stylesheet" href="../../asset/css/main.css">
+
 </head>
 <body>
 
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <nav class="navbar navbar-expand-lg mt-3">
-              <a class="navbar-brand" href="#">
-                <img src="./asset/img/mobile-phone-shop-logo-vector-31968563-removebg-preview.png" alt="">
-              </a>
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-            
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav">
-                  <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Products</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Services</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="header-icon">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <div class="header-cart">
-                  <i class="fa-solid fa-basket-shopping"></i>
-                  <span>Cart</span>
-                </div>
-                <div class="header-admin">
-                  <i class="fa-solid fa-users-gear"></i>
-                  Admin
-                </div>
-              </div>
-            </nav>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <nav class="navbar navbar-expand-lg mt-3">
+        <a class="navbar-brand" href="#">
+          <img src="../../asset/img/mobile-phone-shop-logo-vector-31968563-removebg-preview.png" alt="">
+        </a>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="header-icon">
+          <div class="header-search">
+            <a class="nav-link icon-search" id="icon-search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input type="text" name="" id="input-search">
+              <i class="fa-solid fa-xmark"></i>
+            </a>
           </div>
-    </header>
+          <div class="header-cart">
+            <i class="fa-solid fa-basket-shopping"></i>
+            <span>Cart</span>
+          </div>
+          <div class="header-admin">
+            <i class="fa-solid fa-users-gear"></i>
+            Admin
+          </div>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"><i class="fa-solid fa-bars"></i></span>
+        </button>
+      </nav>
+    </div>
+  </header>
 
-    <!-- Carousel -->
-    <section class="phoneCarousel"></section>
+  <!-- Carousel -->
+  <section class="phoneCarousel">
+    <div class="container">
+      <img class="pattern-img" src="../../asset/img/pattern-square-special-patterns-grid-dots_p-removebg-preview.png" alt="">
+      <div class="row carousel_container">
+        <div class="col-12 col-md-6">
+          <span class="carousel_desc">Exclusive Smart Phone</span>
+          <h1 class="carousel_heading my-4">Let go to have the New Version <br> See yourself better</h1>
+          <p class="carousel_para">You can choose a payment option that works for you, pay less with a trade‑in, connect your new iPhone to your carrier, and get set up quickly.
+            You can also chat with a Specialist anytime.
+          </p>
+          <div class="carousel_btn d-flex mt-4 mt-md-5">
+            <div class="carousel_btn-left">
+              <button class="btn btn--primary">Get Started
+                <i class="fa-solid fa-arrow-right-long ml-1"></i>
+              </button>
+            </div>
+            <div class="carousel_btn-right ml-3">
+              <button class="btn btn--outline">How it works
+                <i class="fa-solid fa-arrow-right-long ml-1"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 d-none d-md-block">
+          <img class="carousel-img" src="../../asset/img/iphone-13-model-unselect-gallery-2-202207_GEO_US-removebg.png" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Features -->
-    <section class="phoneFeatures"></section>
+  <!-- Features -->
+  <section class="phoneFeatures">
+    <div class="container">
+      <div class="row features_container">
+        <div class="col-12 col-md-5 features_left">
+          <h2 class="box_heading my-4">What Special About this Products?</h2>
+          <p class="box_desc">Get the carrier deals you love and save on a new iPhone when you trade in and purchase right here at Apple. <br> <br> And pay for your new iPhone over 24 months, interest‑free when you choose to check out with Apple Card Monthly Installments.
+          </p>
+          <button class="btn btn--outline mt-4">Read More</button>
+        </div>
+        <div class="col-12 col-md-7 features__right">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="features__item">
+                <i class="fa-solid fa-truck fa-flip-horizontal"></i>
+                <div class="features__item-text">
+                  <h5>Fastest Delivery</h5>
+                  <p>Easy to delivery or pick up available items.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="features__item">
+                <i class="fa-solid fa-bullhorn"></i>
+                <div class="features__item-text">
+                  <h5>Super Offer</h5>
+                  <p>You can pay when you choose to check out with Apple Card.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="features__item">
+                <i class="fa-solid fa-earth-americas"></i>
+                <div class="features__item-text">
+                  <h5>Around the World</h5>
+                  <p>Over 1 million hours of real‑world driving crash data</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="features__item">
+                <i class="fa-solid fa-gamepad"></i>
+                <div class="features__item-text">
+                  <h5>Many Apps</h5>
+                  <p>Explore all AirPods models find the best ones for you.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Products -->
-    <section class="phoneProducts"></section>
+  <!-- Products -->
+  <section class="phoneProducts">
+    <div class="container">
+      <h2 class="box_heading text-center">Our Popular Products</h2>
+      <p class="box_desc text-center">Welcome to the year of you. Now all you need is your mobile phone.</p>
+      <div class="projects__content mt-5">
+        <ul class="nav nav-pills mb-3  justify-content-center" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="pills-home-tab" data-toggle="pill" data-target="#all"
+                    type="button" role="tab" aria-controls="pills-home" aria-selected="true">Iphone</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-profile-tab" data-toggle="pill" data-target="#illu"
+                    type="button" role="tab" aria-controls="pills-profile"
+                    aria-selected="false">Samsung</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-contact-tab" data-toggle="pill" data-target="#photo"
+                    type="button" role="tab" aria-controls="pills-contact"
+                    aria-selected="false">Xiaomi</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-contact-tab" data-toggle="pill" data-target="#web"
+                    type="button" role="tab" aria-controls="pills-contact"
+                    aria-selected="false">Vivo</button>
+            </li>
+        </ul>
+        <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="pills-home-tab">
+                <div class="row">
+                    <div class="col-sm-6 col-lg-4 col-12">
+                        <div class="card">
+                            <img src="../../img/g1.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Apologetic robot holding flowers</h5>
+                                <p class="card-text">Branding</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4 col-12">
+                        <div class="card">
+                            <img src="../../img/g2.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Apologetic robot holding flowers</h5>
+                                <p class="card-text">Branding</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4 col-12">
+                        <div class="card">
+                            <img src="../../img/g3.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Apologetic robot holding flowers</h5>
+                                <p class="card-text">Branding</p>
+                            </div>
+                        </div>
+                    </div>
 
-    <!-- Comments -->
-    <section class="phoneComments"></section>
+                    <!-- hàng 2 -->
+                    <div class="col-sm-6 col-lg-4 col-12 mt-4">
+                        <div class="card">
+                            <img src="../../img/g4.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Apologetic robot holding flowers</h5>
+                                <p class="card-text">Branding</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-    <!-- Offer -->
-    <section class="phoneOffer"></section>
-    
-    <!-- Footer -->
-    <footer></footer>
-    
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+            <div class="tab-pane fade" id="illu" role="tabpanel" aria-labelledby="pills-profile-tab">
+                Illustration</div>
+            <div class="tab-pane fade" id="photo" role="tabpanel" aria-labelledby="pills-contact-tab">
+                Photography</div>
+            <div class="tab-pane fade" id="web" role="tabpanel" aria-labelledby="pills-contact-tab">Website
+            </div>
+        </div>
+        <button class="btn btn--primary d-block mx-auto mt-4">See more</button>
+    </div>
+    </div>
+  </section>
+
+  <!-- Comments -->
+  <section class="phoneComments">
+    <div class="container">
+      <div class="container">
+        <div class="row comments_container">
+          <div class="col-12 col-md-5 comments_left">
+            <h2 class="box_heading my-4">What Customer Say About Us</h2>
+            <p class="box_desc">The iPhone 13 is in Apple's latest collection, so there's no reason why it hasn't received a lot of attention. Let's see how the user experience with the iPhone 13 is!
+            </p>
+            <button class="btn btn--primary mt-4 mb-4 mb-md-0">Give your Valuable Feedback</button>
+          </div>
+          <div class="col-12 col-md-7 comments_right">
+            <div class="comments_box">
+              <div class="comments_item">
+                <i class="fa-solid fa-quote-left"></i>
+                <p class="comments_para">I think instead of taking old phone models to obscurity, Apple can continue to support them without necessarily making it obvious that they will be discontinued sooner</p>
+                <div class="comments_person">
+                  <img src="../../asset/img/testi1.jpg" alt="" class="comments_avatar">
+                  <div class="comments_info">
+                    <h5>Albert Flores</h5>
+                    <span>albert.cruz@example.com</span>
+                  </div>
+                </div>
+              </div>
+              <div class="comments_item">
+                <i class="fa-solid fa-quote-left"></i>
+                <p class="comments_para">The only reasons it has four I will explain later but for starters let’s talk about the negative on the iPhones, I absolutely love it.</p>
+                <div class="comments_person">
+                  <img src="../../asset/img/testi2.jpg" alt="" class="comments_avatar">
+                  <div class="comments_info">
+                    <h5>Black Adam</h5>
+                    <span>blackA.cruz@example.com</span>
+                  </div>
+                </div>
+              </div>
+              <div class="comments_item">
+                <i class="fa-solid fa-quote-left"></i>
+                <p class="comments_para">I have an iPhone 12 Pro Max and I absolutely love it, it's just a fantastic device, super smooth, nothing ever lags and does everything you want it to do and more.</p>
+                <div class="comments_person">
+                  <img src="../../asset/img/testi3.jpg" alt="" class="comments_avatar">
+                  <div class="comments_info">
+                    <h5>Wonder Woman</h5>
+                    <span>wonder.wman@example.com</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Offer -->
+  <section class="phoneOffer">
+    <div class="container">
+      <div class="row">
+        <div class="col-6 d-none d-lg-block">
+          <img src="../../asset/img/pic3.png" alt="">
+        </div>
+        <div class="col-lg-6 col-12 offer_right">
+          <h2 class="box_heading my-4">Subscribe For Get Update And New Offers</h2>
+            <p class="box_desc">We make it easy to choose the right iPhone and deal for you, trade in your current iPhone, and transfer everything to your new one, from the people who know iPhone best.
+            </p> 
+            <input class="w-75 d-block mt-4" type="text" name="" id="" placeholder="Enter your email address">
+            <button class="btn btn--primary mt-4 mt-md-5">Subscribe Now</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-6 col-md-3 col-lg-4 footer_left">
+          <img src="../../asset/img/mobile-phone-shop-logo-vector-31968563-removebg-preview.png" alt="">
+          <span>2972 Western Rd. <br> Santa Ana, llinous 8575</span>
+          <ul>
+            <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+            <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+            <li><a href=""><i class="fa-brands fa-linkedin-in"></i></a></li>
+            <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3 col-lg-3 footer_center">
+          <h5>Our Services</h5>
+          <ul>
+            <li><a href="">Easy to order</a></li>
+            <li><a href="">Faster delivery</a></li>
+            <li><a href="">Best quality</a></li>
+            <li><a href="">Home delivery</a></li>
+            <li><a href="">24/8 service</a></li>
+            <li><a href="">Supper offer</a></li>
+          </ul>
+        </div>
+        <div class="col-5 col-md-2 col-lg-2 footer_center mt-4 mt-md-0">
+          <h5>Company</h5>
+          <ul>
+            <li><a href="">Project</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Menu</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-7 col-md-4 col-lg-3 footer_right mt-4 mt-md-0">
+          <h5>Contact Us</h5>
+          <ul>
+            <li>
+              <a href="">
+                <i class="fa-solid fa-envelope"></i>
+                <span>handphone@gmail.com</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <i class="fa-solid fa-phone"></i>
+                <span>+0899 324 102</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>132 Western Rd. <br> Santa Ana, llinois 87412</span>
+              </a>
+            </li>
+          </ul>
+          <div class="img_app mt-4">
+            <img src="../../asset/img/Untitled-1.jpg" alt="">
+            <img src="../../asset/img/Untitled-123.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" class="btn_to-top cd-top text-replace js-cd-top"><i class="fa-solid fa-arrow-up"></i></a>
+  
+  <!-- Jquery -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+  <!-- Slick library -->
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+  <script>
+    $('.comments_box').slick({
+      infinite: true,
+      dots: true,
+      arrows: false,
+      dotsClass: false,
+      autoplay: true,
+      autoplaySpeed: 3000,
+    });
+  </script>
+
+  <script src="./asset/sass/Vendors/util.js"></script>
+  <script src="./asset/sass/Vendors/main.js"></script>
+
 </body>
 </html>

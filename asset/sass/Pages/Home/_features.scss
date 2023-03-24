@@ -1,0 +1,60 @@
+
+.phoneFeatures {
+    padding-top: $pd-5;
+    @include respond(phone) {
+        padding-top: 70px;
+    }
+    .features_container {
+        @include flexItem(flex, center, center);
+        .features_left {
+            padding-right: 45px;
+        }
+        .features__right {
+            @include flexItem(flex, center, center);
+            @include respond(tablet) {
+                padding-left: 50px;
+            }
+            @include respond(phone) {
+                padding-left: 10px;
+                margin-top: 40px;
+            }
+            h5 {
+                font-size: $fs-14;
+                margin-bottom: 10px;
+                @include respond(desktop) {
+                    font-size: 20px;
+                }
+                @include respond(tablet) {
+                    font-size: 16px;
+                }
+            }
+            .features__item {
+                @include flexItem(flex, center, center);
+                @include respond(tablet) {
+                    justify-content: flex-start;
+                }
+                &:nth-child(odd) {
+                    margin-bottom: 65px;
+                    @include respond(tablet) {
+                        margin-bottom: 25px;
+                    }
+                }
+                .features__item-text {
+                    margin-left: 20px;
+                    p {
+                        @include respond(desktop) {
+                            font-size: 13px;
+                        }
+                    }
+                }
+                i {
+                    font-size: $fs-14;
+                    background-color: $color-light-1;
+                    padding: 15px;
+                    border-radius: 50%;
+                    @include flexItem(flex, center, center);
+                }
+            }
+        }
+    }
+}
