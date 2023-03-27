@@ -20,61 +20,109 @@
     <!-- Slick Library -->
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 
+    <!-- Animate -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
     <!-- File css -->
     <link rel="stylesheet" href="../../asset/css/main.css">
 
 </head>
-<body>
+<body style="position: relative;">
 
   <!-- Header -->
   <header>
-    <div class="container">
-      <nav class="navbar navbar-expand-lg mt-3">
-        <a class="navbar-brand" href="#">
-          <img src="../../asset/img/mobile-phone-shop-logo-vector-31968563-removebg-preview.png" alt="">
-        </a>
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Products</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
-            </li>
-          </ul>
-        </div>
-        <div class="header-icon">
-          <div class="header-search">
-            <a class="nav-link icon-search" id="icon-search">
-              <i class="fa-solid fa-magnifying-glass"></i>
-              <input type="text" name="" id="input-search">
-              <i class="fa-solid fa-xmark"></i>
-            </a>
+    <div class="header-inner">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg mt-3">
+          <a class="navbar-brand" href="#">
+            <img src="../../asset/img/mobile-phone-shop-logo-vector-31968563-removebg-preview.png" alt="">
+          </a>
+        
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Products</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+            </ul>
           </div>
-          <div class="header-cart">
-            <i class="fa-solid fa-basket-shopping"></i>
-            <span>Cart</span>
-            <span id="quantity">0</span>
+          <div class="header-icon">
+            <div class="header-search">
+              <a class="nav-link icon-search" id="icon-search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" name="" id="input-search">
+                <i class="fa-solid fa-xmark"></i>
+              </a>
+            </div>
+            <div class="header-admin">
+              <a class="admin-link" href="../../admin/view/admin.html">
+                <i class="fa-solid fa-users-gear"></i>
+                Admin
+              </a>
+            </div>
+            <div class="header-cart" data-toggle="modal" data-target="#cartModal">
+              <i class="fa-solid fa-basket-shopping"></i>
+              Cart
+              <span id="cart_quantity">0</span>
+            </div>
           </div>
-          <div class="header-admin">
-            <i class="fa-solid fa-users-gear"></i>
-            Admin
+  
+          <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header border-bottom-0">
+                  <h5 class="modal-title" id="exampleModalLabel">
+                    Cart Phone
+                  </h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <table class="table table-image">
+                    <thead>
+                      <tr>
+                        <th scope="col"></th>
+                        <th scope="col">Product</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Qty</th>
+                        <th scope="col">Total</th>
+                        <th scope="col">Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody id="tBodyCart">
+                      
+                    </tbody>
+                  </table> 
+                  <div class="d-flex justify-content-end">
+                    <h5>Total: <span class="price text-success"></span></h5>
+                  </div>
+                </div>
+                <div class="modal-footer border-top-0 d-flex justify-content-between">
+                  <button type="button" class="btn-modal btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn-modal btn-secondary" data-dismiss="modal">Emty Cart</button>
+                  <button type="button" class="btn-modal btn-success">Pay Now</button>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"><i class="fa-solid fa-bars"></i></span>
-        </button>
-      </nav>
+  
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"><i class="fa-solid fa-bars"></i></span>
+          </button>
+        </nav>
+      </div>
     </div>
   </header>
 
@@ -168,80 +216,53 @@
     <div class="container">
       <h2 class="box_heading text-center">Our Popular Products</h2>
       <p class="box_desc text-center">Welcome to the year of you. Now all you need is your mobile phone.</p>
-      <div class="projects__content mt-5">
-        <ul class="nav nav-pills mb-3  justify-content-center" id="pills-tab" role="tablist">
-            <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="pills-home-tab" data-toggle="pill" data-target="#all"
-                    type="button" role="tab" aria-controls="pills-home" aria-selected="true">Iphone</button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="pills-profile-tab" data-toggle="pill" data-target="#illu"
-                    type="button" role="tab" aria-controls="pills-profile"
-                    aria-selected="false">Samsung</button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="pills-contact-tab" data-toggle="pill" data-target="#photo"
-                    type="button" role="tab" aria-controls="pills-contact"
-                    aria-selected="false">Xiaomi</button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="pills-contact-tab" data-toggle="pill" data-target="#web"
-                    type="button" role="tab" aria-controls="pills-contact"
-                    aria-selected="false">Vivo</button>
-            </li>
-        </ul>
-        <div class="tab-content" id="pills-tabContent">
-            <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="pills-home-tab">
-                <div class="row">
-                    <div class="col-sm-6 col-lg-4 col-12">
-                        <div class="card">
-                            <img src="../../img/g1.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Apologetic robot holding flowers</h5>
-                                <p class="card-text">Branding</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-4 col-12">
-                        <div class="card">
-                            <img src="../../img/g2.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Apologetic robot holding flowers</h5>
-                                <p class="card-text">Branding</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-4 col-12">
-                        <div class="card">
-                            <img src="../../img/g3.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Apologetic robot holding flowers</h5>
-                                <p class="card-text">Branding</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- hàng 2 -->
-                    <div class="col-sm-6 col-lg-4 col-12 mt-4">
-                        <div class="card">
-                            <img src="../../img/g4.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Apologetic robot holding flowers</h5>
-                                <p class="card-text">Branding</p>
-                            </div>
-                        </div>
-                    </div>
+      <div class="products__content mt-5">
+        <select id="selectType" class="mb-5" name="" id="">
+          <option value="all">All</option>
+          <option value="iphone">Iphone</option>
+          <option value="samsung">Samsung</option>
+        </select>
+        <div class="row">
+          <div class="col-sm-6 col-lg-4 col-12">
+              <div class="card">
+                <div class="card-overlay pl-5">
+                  <h1 class="animate__animated animate__fadeInDown">More info</h1>
+                  <p class="animate__animated animate__fadeInDown">Screen: </p>
+                  <p class="animate__animated animate__fadeInDown">Description:</p>
+                  <button class="btn btn--add animate__animated animate__fadeInUp">Add to Cart</button>
                 </div>
-            </div>
+                  <img src="../../img/g1.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                      <span class="card-type">Iphone</span>
+                      <h5 class="card-name my-2">Apologetic robot holding flowers</h5>
+                      <ul class="d-flex mb-3">
+                        <li class="mr-1" style="color: rgb(216, 216, 11)"><i class="fa-solid fa-star"></i></li>
+                        <li class="mr-1" style="color: rgb(216, 216, 11)"><i class="fa-solid fa-star"></i></li>
+                        <li class="mr-1" style="color: rgb(216, 216, 11)"><i class="fa-solid fa-star"></i></li>
+                        <li class="mr-1" style="color: rgb(216, 216, 11)"><i class="fa-solid fa-star"></i></li>
+                        <li class="mr-1" style="color: rgb(183, 179, 179)"><i class="fa-solid fa-star"></i></li>
+                      </ul>
+                      <div class="card-bottom d-flex justify-content-between">
+                        <span class="card-price">$20.09</span>
+                        <span>In Stock</span>
+                      </div>
+                  </div>
+              </div>
+          </div>
 
-            <div class="tab-pane fade" id="illu" role="tabpanel" aria-labelledby="pills-profile-tab">
-                Illustration</div>
-            <div class="tab-pane fade" id="photo" role="tabpanel" aria-labelledby="pills-contact-tab">
-                Photography</div>
-            <div class="tab-pane fade" id="web" role="tabpanel" aria-labelledby="pills-contact-tab">Website
-            </div>
+          <!-- hàng 2 -->
+          <!-- <div class="col-sm-6 col-lg-4 col-12 mt-4">
+              <div class="card">
+                  <img src="../../img/g4.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                      <h5 class="card-title">Apologetic robot holding flowers</h5>
+                      <p class="card-text">Branding</p>
+                  </div>
+              </div>
+          </div> -->
         </div>
-        <button class="btn btn--primary d-block mx-auto mt-4">See more</button>
+      </div>
+      <button class="btn btn--primary d-block mx-auto mt-4">See more</button>
     </div>
     </div>
   </section>
@@ -383,6 +404,7 @@
     </div>
   </footer>
 
+  <!-- Btn to top -->
   <a href="#" class="btn_to-top cd-top text-replace js-cd-top"><i class="fa-solid fa-arrow-up"></i></a>
   
   <!-- Jquery -->
@@ -405,6 +427,20 @@
 
   <script src="../../asset/sass/Vendors/util.js"></script>
   <script src="../../asset/sass/Vendors/main.js"></script>
+
+  <!-- Header Scroll -->
+  <script>
+    $(function(){
+    var navbar = $('.header-inner');
+    $(window).scroll(function(){
+      if($(window).scrollTop() <=40){
+        navbar.removeClass('navbar-scroll');
+      }else{
+        navbar.addClass('navbar-scroll');
+      }
+    });
+  });
+  </script>
 
 </body>
 </html>

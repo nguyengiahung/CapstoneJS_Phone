@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CapstoneProject-JS</title>
+
+    <!-- Font Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Boostrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <style>
+        .background {
+            background-image: url('./asset/img/pic1_2.jpg');
+            background-position: center center;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            height: 100vh;
+            position: relative;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 4;
+            gap: 0 70px;
+        }
+        .background::after {
+            position: absolute;
+            content: "";
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 2;
+        }
+        a {
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: none;
+            color: white;
+        }
+        .button {
+            z-index: 10;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: orange;
+            padding: 20px 30px;
+            border-radius: 10px;
+            color: white;
+        }
+        .button i {
+            text-decoration: none;
+            font-size: 30px;
+        }
+        .button p {
+            font-size: 20px;
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="background">
+        <a href="./admin/view/admin.html" class="button button-admin">
+            <i class="fa-solid fa-users-gear"></i>
+            <p>Admin</p>
+        </a>
+
+        <a href="./customer/view/store.html" class="button button-store">
+            <i class="fa-solid fa-store"></i>
+            <p>Store</p>
+        </a>
+    </div>
+</body>
+</html>

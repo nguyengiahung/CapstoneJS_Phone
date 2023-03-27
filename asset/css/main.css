@@ -119,6 +119,10 @@ h1, h2, h3, h4, h5 {
     font-size: 12px;
   }
 }
+.btn-modal {
+  border-radius: 30px;
+  padding: 10px 20px;
+}
 
 .btn--primary {
   transition: all 0.4s;
@@ -135,6 +139,19 @@ h1, h2, h3, h4, h5 {
 }
 .btn--outline:hover {
   background-color: #f2bd57;
+}
+
+.btn--add {
+  background-color: #f2bd57;
+  padding: 10px 15px;
+  font-size: 12px;
+  position: absolute;
+  transition: all 0.2s;
+  right: 10px;
+  bottom: 15px;
+}
+.btn--add:hover {
+  box-shadow: 0px 4px 15px rgba(242, 189, 87, 0.5);
 }
 
 .box_heading {
@@ -173,6 +190,34 @@ h1, h2, h3, h4, h5 {
   }
 }
 
+header .header-inner {
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 90px;
+  z-index: 9999;
+}
+header .navbar-scroll {
+  background-color: #ffffff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.04);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 9999;
+  transition: all 0.5s;
+}
+header .navbar-scroll .navbar-brand {
+  color: #000;
+}
+header .navbar-scroll .nav-item i {
+  color: #000;
+}
 header img {
   width: 70px;
 }
@@ -237,6 +282,31 @@ header .header-icon i, header .header-icon .header-cart, header .header-icon .he
 header .header-icon i:hover, header .header-icon .header-cart:hover, header .header-icon .header-admin:hover {
   color: #f2bd57;
   cursor: pointer;
+}
+header .header-icon .header-cart {
+  position: relative;
+}
+header .header-icon .header-cart #cart_quantity {
+  position: absolute;
+  top: -16px;
+  right: -16px;
+  background-color: white;
+  border-radius: 50%;
+  padding: 0px 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #08090d;
+  font-size: 14px;
+}
+header .header-icon .header-admin .admin-link {
+  text-decoration: none;
+  color: #08090d;
+  transition: all 0.2s;
+}
+header .header-icon .header-admin .admin-link:hover {
+  text-decoration: none;
+  color: #f2bd57;
 }
 @media (max-width: 1200px) {
   header .header-icon {
@@ -303,6 +373,24 @@ header #input-search ~ i {
 }
 header #input-search:valid ~ i {
   opacity: 1;
+}
+header .table-image thead td, header .table-image thead th {
+  border: 0;
+  color: #666;
+  font-size: 0.8rem;
+}
+header .table-image td, header .table-image th {
+  vertical-align: middle;
+  text-align: center;
+}
+header .table-image td.qty, header .table-image th.qty {
+  max-width: 2rem;
+}
+header .price {
+  margin-left: 1rem;
+}
+header .modal-footer {
+  padding-top: 0rem;
 }
 
 footer {
@@ -399,7 +487,7 @@ footer .footer_right i {
   background-size: 100%;
   background-repeat: no-repeat;
   position: relative;
-  padding-top: 80px;
+  padding-top: 150px;
 }
 @media (max-width: 767px) {
   .phoneCarousel {
@@ -566,6 +654,39 @@ footer .footer_right i {
   .phoneProducts {
     padding-top: 60px;
   }
+}
+.phoneProducts .products__content .card {
+  border-radius: 15px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+.phoneProducts .products__content .card .card-overlay {
+  transition: all 0.5s;
+  position: absolute;
+  color: white;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+}
+.phoneProducts .products__content .card .card-overlay h1 {
+  margin: 20px 0 8px;
+  font-size: 25px;
+}
+.phoneProducts .products__content .card .card-overlay p {
+  color: white;
+  margin-bottom: 8px;
+}
+.phoneProducts .products__content .card:hover {
+  transform: scale(1.1);
+}
+.phoneProducts .products__content .card:hover .card-overlay {
+  display: block;
+}
+.phoneProducts .products__content #selectType {
+  border-radius: 5px;
+  padding: 5px 30px 5px 5px;
 }
 
 .phoneComments {
