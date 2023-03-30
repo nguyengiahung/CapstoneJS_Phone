@@ -34,7 +34,7 @@
         <div class="row">
           <div class="col-md-8">
             <!-- BEGIN BUTTOM THÊM MỚI -->
-            <button id="btnThemSP" class="btn btn-success" data-toggle="modal" data-target="#myModal">
+            <button id="addProduct" class="btn btn-success" data-toggle="modal" data-target="#myModal">
               <i class="fa fa-plus mr-1"></i>
               Add Phone
             </button>
@@ -92,6 +92,7 @@
           </div>
           <!-- Modal body -->
           <div class="modal-body">
+            <form id="formProduct">
             <div class="form-group d-flex align-items-center">
               <i class="fa-solid fa-mobile-retro"></i>
               <input id="name" class="form-control" placeholder="Press name" />
@@ -128,12 +129,10 @@
                 <option value="2">Samsung</option>
               </select>
             </div>
+          </form>
           </div>
           <!-- Modal footer -->
-          <div class="modal-footer">
-            <button type="button" class="btn btn-modalfooter-edit">Edit</button>
-            <button type="button" class="btn btn-modalfooter-delete">Delete</button>
-          </div>
+          <div class="modal-footer"></div>
         </div>
       </div>
     </div>
