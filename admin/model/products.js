@@ -1,3 +1,4 @@
+// create object product
 function Product(name,price,screen,backCamera,frontCamera,img,desc,type) {
     this.name = name;
     this.price = price;
