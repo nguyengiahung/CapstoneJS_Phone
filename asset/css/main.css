@@ -102,8 +102,8 @@ h1, h2, h3, h4, h5 {
 }
 
 .btn {
-  border-radius: 30px;
   padding: 15px 30px;
+  border-radius: 30px;
   font-size: 14px;
   color: #08090d;
   font-family: "Poppins", sans-serif;
@@ -152,6 +152,23 @@ h1, h2, h3, h4, h5 {
 }
 .btn--add:hover {
   box-shadow: 0px 4px 15px rgba(242, 189, 87, 0.5);
+}
+
+.btn--modal {
+  padding: 5px 10px;
+  border-radius: 2px;
+}
+
+.btn--quantity {
+  padding: 3px 6px;
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  margin: 0 5px;
+}
+
+#tBodyCart {
+  font-size: 12px;
 }
 
 .box_heading {
@@ -288,6 +305,7 @@ header .header-icon .header-cart {
 }
 header .header-icon .header-cart #cart_quantity {
   position: absolute;
+  width: 22px;
   top: -16px;
   right: -16px;
   background-color: white;

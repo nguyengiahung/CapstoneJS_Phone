@@ -52,7 +52,7 @@
               <li class="nav-item">
                 <a class="nav-link" href="#">About</a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item"> 
                 <a class="nav-link" href="#">Contact</a>
               </li>
             </ul>
@@ -74,7 +74,7 @@
             <div class="header-cart" data-toggle="modal" data-target="#cartModal">
               <i class="fa-solid fa-basket-shopping"></i>
               Cart
-              <span id="cart_quantity">0</span>
+              <input type="text" id="cart_quantity" value="0"/>
             </div>
           </div>
   
@@ -94,8 +94,9 @@
                     <thead>
                       <tr>
                         <th scope="col"></th>
-                        <th scope="col">Product</th>
+                        <th scope="col">Name</th>
                         <th scope="col">Price</th>
+                        <th scope="col">Image</th>
                         <th scope="col">Qty</th>
                         <th scope="col">Total</th>
                         <th scope="col">Actions</th>
@@ -111,8 +112,8 @@
                 </div>
                 <div class="modal-footer border-top-0 d-flex justify-content-between">
                   <button type="button" class="btn-modal btn-secondary" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn-modal btn-secondary" data-dismiss="modal">Emty Cart</button>
-                  <button type="button" class="btn-modal btn-success">Pay Now</button>
+                  <button type="button" id="btn-empty" class="btn-modal btn-secondary">Emty Cart</button>
+                  <button type="button" id="btn-pay" class="btn-modal btn-success">Pay Now</button>
                 </div>
               </div>
             </div>
@@ -217,49 +218,15 @@
       <h2 class="box_heading text-center">Our Popular Products</h2>
       <p class="box_desc text-center">Welcome to the year of you. Now all you need is your mobile phone.</p>
       <div class="products__content mt-5">
-        <select id="selectType" class="mb-5" name="" id="">
+        <select id="selectType" defaultValue="All" class="mb-5" name="" id="">
           <option value="all">All</option>
-          <option value="iphone">Iphone</option>
-          <option value="samsung">Samsung</option>
+          <option value="Iphone">Iphone</option>
+          <option value="Samsung">Samsung</option>
         </select>
-        <div class="row">
-          <div class="col-sm-6 col-lg-4 col-12">
-              <div class="card">
-                <div class="card-overlay pl-5">
-                  <h1 class="animate__animated animate__fadeInDown">More info</h1>
-                  <p class="animate__animated animate__fadeInDown">Screen: </p>
-                  <p class="animate__animated animate__fadeInDown">Description:</p>
-                  <button class="btn btn--add animate__animated animate__fadeInUp">Add to Cart</button>
-                </div>
-                  <img src="../../img/g1.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                      <span class="card-type">Iphone</span>
-                      <h5 class="card-name my-2">Apologetic robot holding flowers</h5>
-                      <ul class="d-flex mb-3">
-                        <li class="mr-1" style="color: rgb(216, 216, 11)"><i class="fa-solid fa-star"></i></li>
-                        <li class="mr-1" style="color: rgb(216, 216, 11)"><i class="fa-solid fa-star"></i></li>
-                        <li class="mr-1" style="color: rgb(216, 216, 11)"><i class="fa-solid fa-star"></i></li>
-                        <li class="mr-1" style="color: rgb(216, 216, 11)"><i class="fa-solid fa-star"></i></li>
-                        <li class="mr-1" style="color: rgb(183, 179, 179)"><i class="fa-solid fa-star"></i></li>
-                      </ul>
-                      <div class="card-bottom d-flex justify-content-between">
-                        <span class="card-price">$20.09</span>
-                        <span>In Stock</span>
-                      </div>
-                  </div>
-              </div>
+        <div id="boxProducts" class="row">
+          <div class="card-deck">
+              
           </div>
-
-          <!-- hàng 2 -->
-          <!-- <div class="col-sm-6 col-lg-4 col-12 mt-4">
-              <div class="card">
-                  <img src="../../img/g4.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                      <h5 class="card-title">Apologetic robot holding flowers</h5>
-                      <p class="card-text">Branding</p>
-                  </div>
-              </div>
-          </div> -->
         </div>
       </div>
       <button class="btn btn--primary d-block mx-auto mt-4">See more</button>
@@ -300,7 +267,7 @@
                     <h5>Black Adam</h5>
                     <span>blackA.cruz@example.com</span>
                   </div>
-                </div>
+                </div> 
               </div>
               <div class="comments_item">
                 <i class="fa-solid fa-quote-left"></i>
@@ -441,6 +408,11 @@
     });
   });
   </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+  <script src="../../admin/model/products.js"></script>
+  <script src="../../admin/services/productsServices.js"></script>
+  <script src="../../admin/controller/main.js"></script>
 
 </body>
 </html>
