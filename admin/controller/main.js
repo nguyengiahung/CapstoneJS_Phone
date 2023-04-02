@@ -1,4 +1,5 @@
 const productSer = new productsServices();
+const validation = new Validation();
 //Hien thi bang 
 function showTable(arrayData) {
     var content = "";
@@ -40,6 +41,33 @@ function showProductsList() {
 //Lay danh sach thoi diem load web
 showProductsList();
 
+function Validation() {
+
+    this.checkEmpty = function(valueInput, spanID, message) {
+        if (valueInput === '' || valueInput === '0') {
+            document.getElementById(spanID).display = "block";
+            document.getElementById(spanID).innerHTML = message;
+            return false;
+        }
+        document.getElementById(spanID).display = "none";
+        document.getElementById(spanID).innerHTML = '';
+        return true;
+    }
+
+    this.checkSame = function(valueInput, spanID, message, pattern) {
+
+        if (valueInput.match(pattern)) {
+            document.getElementById(spanID).display = "none";
+            document.getElementById(spanID).innerHTML = '';
+            return true;
+        } else {
+            document.getElementById(spanID).display = "block";
+            document.getElementById(spanID).innerHTML = message;
+            return false;
+        }
+    }
+}
+
 function addProduct() {
     // get data
     var name = document.querySelector("#name").value;
@@ -50,19 +78,35 @@ function addProduct() {
     var img = document.querySelector("#img").value;
     var desc = document.querySelector("#desc").value;
     var type = document.querySelector("#type").value;
-    //create object
-    var products = new Product(name, price, screen, backCamera, frontCamera, img, desc, type)
-    console.log(products);
-    //truyen xuong BE
-    productSer.addProductSer(products)
-        .then(function (result) {
-            console.log(result);
-            showProductsList();
-        })
-        .catch(function (error) {
-            console.log(error)
-        })
-    //hien thi danh sach san pham
+
+    var isValid = true;
+
+    isValid &= validation.checkEmpty(name, 'name1', 'Vui lòng nhập tên sản phẩm') && validation.checkSame(name, 'name1', 'Tên sản phẩm chưa đúng định dạng', /^[A-Z a-z]+$/);
+    isValid &= validation.checkEmpty(price, 'price1', 'Vui lòng nhập giá tiền') && validation.checkSame(price, 'price1', 'Giá tiền phải là một số', /^[0-9]+$/)
+    isValid &= validation.checkEmpty(screen, 'screen1', 'Vui lòng nhập kích thước màn hình');
+    isValid &= validation.checkEmpty(backCamera, 'backCamera1', 'Vui lòng nhập độ phân giải camera sau');
+    isValid &= validation.checkEmpty(frontCamera, 'frontCamera1', 'Vui lòng nhập độ phân giải camera sau');
+    isValid &= validation.checkEmpty(img, 'img1', 'Vui lòng nhập đường dẫn hình ảnh sản phẩm');
+    isValid &= validation.checkEmpty(desc, 'desc1', 'Vui lòng nhập mô tả sản phẩm');
+
+    if (isValid) {
+        //create object
+        var products = new Product(name, price, screen, backCamera, frontCamera, img, desc, type)
+        console.log(products);
+        //truyen xuong BE
+        productSer.addProductSer(products)
+            .then(function (result) {
+                console.log(result);
+                showProductsList();
+                alert("Add product successful");
+                document.querySelector("#myModal .close").click();
+            })
+            .catch(function (error) {
+                console.log(error)
+            })
+        //hien thi danh sach san pham
+    }
+
 }
 
 document.querySelector("#addProduct").onclick = function () {
@@ -127,6 +171,8 @@ function updateProduct(id){
     .then(function(result){
         console.log(result.data);
         showProductsList();
+        alert("Update successful");
+        document.querySelector("#myModal .close").click();
     })
     .catch(function(error){
         console.log(error);
