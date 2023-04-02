@@ -18,7 +18,7 @@ function showTable(arrayData) {
                 <td>${product.type}</td>
                 <td>
                     <button data-toggle="modal" data-target="#myModal" onclick="showProductDetail('${product.id}')" class="btn btn-danger">Edit</button>
-                    <button onclick="deleteProduct('${product.id}')" class="btn btn-info">Delete</button>
+                    <button onclick="deleteProducts('${product.id}')" class="btn btn-info">Delete</button>
                 </td>
             </tr>
         `
@@ -400,7 +400,7 @@ function setLocalStorage(mang) {
 
 // Reset Product and render
 function resetProduct(name) {
-    deleteProduct(name);
+    deleteProducts(name);
     setLocalStorage(Cart)
     renderCart(Cart);
 }
@@ -434,7 +434,7 @@ function emptyCart() {
 }
 
 // Delete SP in cart
-const deleteProduct = function(name) {
+const deleteProducts = function(name) {
     var index = findIndexSP(name);
     if (index != -1) {
         Cart.splice(index, 1);
