@@ -34,7 +34,7 @@
         <div class="row">
           <div class="col-md-8">
             <!-- BEGIN BUTTOM THÊM MỚI -->
-            <button id="btnThemSP" class="btn btn-success" data-toggle="modal" data-target="#myModal">
+            <button id="addProduct" class="btn btn-success" data-toggle="modal" data-target="#myModal">
               <i class="fa fa-plus mr-1"></i>
               Add Phone
             </button>
@@ -92,42 +92,69 @@
           </div>
           <!-- Modal body -->
           <div class="modal-body">
-            <div class="form-group d-flex align-items-center">
-              <i class="fa-solid fa-mobile-retro"></i>
-              <input id="name" class="form-control" placeholder="Press name" />
+            <form id="formProduct">
+            <div class="form-group align-items-center">
+              <div class="d-flex">
+                <i class="fa-solid fa-mobile-retro"></i>
+                <input id="name" class="form-control" placeholder="Press name" />
+              </div>
+              <span id="name1" class="text-danger"></span>
             </div>
-            <div class="form-group d-flex align-items-center">
-              <i class="fa-solid fa-sack-dollar"></i>
-              <input id="price" class="form-control" placeholder="Press price" />
+            <div class="form-group align-items-center">
+              <div class="d-flex">
+                <i class="fa-solid fa-sack-dollar"></i>
+                <input id="price" class="form-control" placeholder="Press price" />
+              </div>
+              <span id="price1" class="text-danger"></span>
             </div>
-            <div class="form-group d-flex align-items-center">
-              <i class="fa-solid fa-mobile-screen"></i>
-              <input id="screen" class="form-control" placeholder="Press screen" />
+            <div class="form-group align-items-center">
+              <div class="d-flex">
+                <i class="fa-solid fa-mobile-screen"></i>
+                <input id="screen" class="form-control" placeholder="Press screen" />
+              </div>
+              <span id="screen1" class="text-danger"></span>
+
             </div>
-            <div class="form-group d-flex align-items-center">
-              <i class="fa-solid fa-camera-retro"></i>
-              <input id="backCamera" class="form-control" placeholder="Press back camera" />
+            <div class="form-group align-items-center">
+              <div class="d-flex">
+                <i class="fa-solid fa-camera-retro"></i>
+                <input id="backCamera" class="form-control" placeholder="Press back camera" />
+              </div>
+              <span id="backCamera1" class="text-danger"></span>
+
             </div>
-            <div class="form-group d-flex align-items-center">
-              <i class="fa-solid fa-camera-rotate"></i>
-              <input id="frontCamera" class="form-control" placeholder="Press front camera" />
+            <div class="form-group align-items-center">
+              <div class="d-flex">
+                <i class="fa-solid fa-camera-rotate"></i>
+                <input id="frontCamera" class="form-control" placeholder="Press front camera" />
+              </div>
+              <span id="frontCamera1" class="text-danger"></span>
             </div>
-            <div class="form-group d-flex align-items-center">
-              <i class="fa-solid fa-image"></i>
-              <input id="img" class="form-control" placeholder="Press info" />
+            <div class="form-group align-items-center">
+              <div class="d-flex">
+                <i class="fa-solid fa-image"></i>
+                <input id="img" class="form-control" placeholder="Press info" />
+              </div>
+              <span id="img1" class="text-danger"></span>
+
             </div>
-            <div class="form-group d-flex align-items-center">
-              <i class="fa-solid fa-pen"></i>
-              <input id="desc" class="form-control" placeholder="Press info" />
+            <div class="form-group align-items-center">
+              <div class="d-flex">
+                <i class="fa-solid fa-pen"></i>
+                <input id="desc" class="form-control" placeholder="Press info" />
+              </div>
+              <span id="desc1" class="text-danger"></span>
+
             </div>
             <div class="form-group d-flex align-items-center">
               <i class="fa-solid fa-object-ungroup"></i>
-              <select name="type" id="type" style="-webkit-appearance: none;">
+              <select name="type" id="type">
                 <option value="0">Choose type</option>
                 <option value="1">Iphone</option>
                 <option value="2">Samsung</option>
               </select>
             </div>
+          </form>
           </div>
           <!-- Modal footer -->
           <div class="modal-footer"></div>
@@ -152,8 +179,11 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
-    
+
   <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+  <script src="../model/products.js"></script>
+  <script src="../services/productsServices.js"></script>
+  <script src="../controller/main.js"></script>
 </body>
 
 </html>
