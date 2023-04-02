@@ -1,4 +1,4 @@
-//-------------------- PRODUCT MANAGEMENT---------------
+//-------------------- PRODUCT MANAGEMENT--------------
 const productSer = new productsServices();
 const validation = new Validation();
 //Hien thi bang 
