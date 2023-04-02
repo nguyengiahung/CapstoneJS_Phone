@@ -18,7 +18,7 @@ function showTable(arrayData) {
                 <td>${product.type}</td>
                 <td>
                     <button data-toggle="modal" data-target="#myModal" onclick="showProductDetail('${product.id}')" class="btn btn-danger">Edit</button>
-                    <button onclick="deleteProducts('${product.id}')" class="btn btn-info">Delete</button>
+                    <button onclick="deleteProduct('${product.id}')" class="btn btn-info">Delete</button>
                 </td>
             </tr>
         `
