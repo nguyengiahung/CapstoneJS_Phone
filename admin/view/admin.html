@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Quản lý sản phẩm</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+  <div class="container">
+    <header class="display-4 my-4">
+      Phone ManageMent
+    </header>
+    <!-- Phan tab menu -->
+    <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" href="#DanhSachSP" role="tab" data-toggle="tab">List Product</a>
+      </li>
+
+    </ul>
+    <br />
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <!--Danh sách sản phẩm -->
+      <div role="tabpanel" class="tab-pane  in active" id="DanhSachSP">
+        <div class="row">
+          <div class="col-md-8">
+            <!-- BEGIN BUTTOM THÊM MỚI -->
+            <button id="addProduct" class="btn btn-success" data-toggle="modal" data-target="#myModal">
+              <i class="fa fa-plus mr-1"></i>
+              Add Phone
+            </button>
+            <!-- END BUTTON THÊM MỚI -->
+          </div>
+          <div class="col-md-4">
+            <!-- BEGIN TÌM KIẾM -->
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Press keyword..." aria-label="Recipient's username"
+                aria-describedby="basic-addon2" />
+              <div class="input-group-append">
+                <span class="input-group-text" id="basic-addon2"><i class="fa fa-search"></i></span>
+              </div>
+            </div>
+            <!-- END TÌM KIẾM -->
+          </div>
+        </div>
+        <div class="clear-fix"></div>
+        <div class="tblSanPham" id="tblSanPham">
+          <!-- BEGIN TABLE SẢN PHẨM -->
+          <table class="table table-bordered">
+            <thead>
+              <th>STT</th>
+              <th>Name</th>
+              <th>Price</th>
+              <th>Screen</th>
+              <th>Back Camera</th>
+              <th>Front Camera</th>
+              <th>Image</th>
+              <th>Desc</th>
+              <th>Type</th>
+              <th>Action</th>
+            </thead>
+            <tbody id="tblDanhSachSP"></tbody>
+          </table>
+          <!-- END TABLE SẢN PHẨM -->
+        </div>
+        <br />
+      </div>
+      <!-- Kết thúc danh sách sản phẩm -->
+    </div>
+
+    <!--KetThuc Tabmenu-->
+
+    <!-- The Modal -->
+    <div class="modal fade" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title text-center">Phone ManageMent</h4>
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+          <!-- Modal body -->
+          <div class="modal-body">
+            <form id="formProduct">
+            <div class="form-group align-items-center">
+              <div class="d-flex">
+                <i class="fa-solid fa-mobile-retro"></i>
+                <input id="name" class="form-control" placeholder="Press name" />
+              </div>
+              <span id="name1" class="text-danger"></span>
+            </div>
+            <div class="form-group align-items-center">
+              <div class="d-flex">
+                <i class="fa-solid fa-sack-dollar"></i>
+                <input id="price" class="form-control" placeholder="Press price" />
+              </div>
+              <span id="price1" class="text-danger"></span>
+            </div>
+            <div class="form-group align-items-center">
+              <div class="d-flex">
+                <i class="fa-solid fa-mobile-screen"></i>
+                <input id="screen" class="form-control" placeholder="Press screen" />
+              </div>
+              <span id="screen1" class="text-danger"></span>
+
+            </div>
+            <div class="form-group align-items-center">
+              <div class="d-flex">
+                <i class="fa-solid fa-camera-retro"></i>
+                <input id="backCamera" class="form-control" placeholder="Press back camera" />
+              </div>
+              <span id="backCamera1" class="text-danger"></span>
+
+            </div>
+            <div class="form-group align-items-center">
+              <div class="d-flex">
+                <i class="fa-solid fa-camera-rotate"></i>
+                <input id="frontCamera" class="form-control" placeholder="Press front camera" />
+              </div>
+              <span id="frontCamera1" class="text-danger"></span>
+            </div>
+            <div class="form-group align-items-center">
+              <div class="d-flex">
+                <i class="fa-solid fa-image"></i>
+                <input id="img" class="form-control" placeholder="Press info" />
+              </div>
+              <span id="img1" class="text-danger"></span>
+
+            </div>
+            <div class="form-group align-items-center">
+              <div class="d-flex">
+                <i class="fa-solid fa-pen"></i>
+                <input id="desc" class="form-control" placeholder="Press info" />
+              </div>
+              <span id="desc1" class="text-danger"></span>
+
+            </div>
+            <div class="form-group d-flex align-items-center">
+              <i class="fa-solid fa-object-ungroup"></i>
+              <select name="type" id="type">
+                <option value="0">Choose type</option>
+                <option value="1">Iphone</option>
+                <option value="2">Samsung</option>
+              </select>
+            </div>
+          </form>
+          </div>
+          <!-- Modal footer -->
+          <div class="modal-footer"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="container"></div>
+  <style>
+    #container {
+      min-width: 310px;
+      max-width: 800px;
+      height: 400px;
+      margin: 0 auto;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+  <script src="../model/products.js"></script>
+  <script src="../services/productsServices.js"></script>
+  <script src="../controller/main.js"></script>
+</body>
+
+</html>
