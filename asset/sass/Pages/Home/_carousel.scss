@@ -1,0 +1,62 @@
+
+.phoneCarousel {
+    background-image: url("../../../asset/img/bg17.png");
+    background-position: bottom center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    padding-top: $pd-8;
+    @include respond(phone) {
+        padding-top: 50px;
+    }
+    .pattern-img {
+        position: absolute;
+        opacity: 0.05;
+        bottom: 0;
+        left: 5%;
+        @include respond(desktop) {
+            width: 20%;
+        }
+    }
+    .carousel-img {
+        width: 50%;
+        filter: drop-shadow(20px 30px 60px #00000099);
+        transform: translateX(70%);
+        @include respond(desktop) {
+            transform: translateX(50%);
+        }
+    }
+    .carousel_container {
+        @include flexItem(flex, center, center);
+        .carousel_desc {
+            color: $color-dark-2;
+            font-size: $fs-14;
+            @include respond(desktop) {
+                font-size: $fs-7;
+            }
+            @include respond(desktop) {
+                font-size: $fs-13;
+            }
+        }
+        .carousel_heading {
+            font-size: $fs-12;
+            @include respond(desktop) {
+                font-size: $fs-8;
+            }
+            @include respond(desktop) {
+                font-size: 35px;
+            }
+        }
+        .carousel_para {
+            @include styleText($color-gray-2, $fs-13, $fw-1);
+            line-height: 1.8;
+            font-family: $font-1;
+            @include respond(desktop) {
+                font-size: 15px;
+            }
+            @include respond(desktop) {
+                font-size: 14px;
+            }
+        }
+    }
+}

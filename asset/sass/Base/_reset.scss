@@ -8,4 +8,44 @@
 
 html, body{
     font-family: 'Rubik', sans-serif;
+    background-color: $color-light-2;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+a, p {
+    color: $color-gray-1;
+    padding: 0;
+    text-decoration: none;
+    margin: 0;
+}
+
+button {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+}
+
+h1,h2,h3,h4,h5 {
+    margin: 0;
+}
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == smallphone {
+        @media (max-width: 575px){@content}; 
+    }
+    @if $breakpoint == phone{
+        @media (max-width: 767px){@content}; 
+    }
+    @if $breakpoint == tablet{
+        @media (max-width: 992px){@content}; 
+    }
+    @if $breakpoint == desktop{
+        @media (max-width: 1200px){@content}; 
+    }
 }
