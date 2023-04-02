@@ -7,22 +7,22 @@
 // Base
 @import "./Base/reset";
 @import "./Base/customize";
-@import "./Base/responsive";
 
 // Components
 @import "./Components/buttons";
 @import "./Components/card";
+@import "./Components/boxtitle";
 
 // Layouts
 @import "./Layouts/header";
-@import "./Layouts/carousel";
-@import "./Layouts/features";
-@import "./Layouts/products";
-@import "./Layouts/comments";
-@import "./Layouts/offer";
 @import "./Layouts/footer";
 
-// Pages
+// Pages - Home
+@import "./Pages/Home/carousel";
+@import "./Pages/Home/features";
+@import "./Pages/Home/products";
+@import "./Pages/Home/comments";
+@import "./Pages/Home/offer";
 
 // Themes
 

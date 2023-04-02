@@ -1,0 +1,25 @@
+
+.box_heading {
+    @include styleText(null,$fs-8,$fw-2);
+    line-height: 1.5;
+    @include respond(desktop) {
+        font-size: 32px;
+    }
+    @include respond(tablet) {
+        font-size: 32px;
+    }
+    @include respond(desktop) {
+        font-size: 25px;
+    }
+}
+
+.box_desc {
+    font-family: $font-1;
+    line-height: 1.8;
+    @include respond(desktop) {
+        font-size: 15px;
+    }
+    @include respond(desktop) {
+        font-size: 14px;
+    }
+}

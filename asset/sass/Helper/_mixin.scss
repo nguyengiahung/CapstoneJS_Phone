@@ -3,3 +3,13 @@
     font-size: $fs;
     font-weight: $fw;
 }
+
+@mixin flexItem($display, $align, $justify) {
+    display: $display;
+    align-items: $align;
+    justify-content: $justify;
+}
+
+@mixin backgroundImage($image-url) {
+    background-image: $image-url;
+}
