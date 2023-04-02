@@ -110,13 +110,13 @@ function addProduct() {
 
 }
 
-document.querySelector("#addProduct").onclick = function () {
+document.querySelector("#addProduct").addEventListener('click', function () {
     //add button for form
     document.querySelector("#myModal .modal-footer").innerHTML = `
         <button class="btn btn-success" onclick="addProduct()">Add</button>
-    `
+    `;
     document.querySelector("#formProduct").reset();
-}
+}) 
 
 function deleteProduct(id) {
     console.log(id);
