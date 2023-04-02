@@ -440,4 +440,3 @@ const deleteProducts = function(name) {
         Cart.splice(index, 1);
     }
 }
-
